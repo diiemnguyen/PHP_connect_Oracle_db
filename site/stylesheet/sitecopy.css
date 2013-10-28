@@ -1,0 +1,1753 @@
+/* $Revision: 1.1 $ 
+ *
+ * Sitecopy CSS 
+ * (c) 1992-2004 Cisco Systems, Inc. All rights reserved. Terms and Conditions: 
+ * http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html
+ *
+ * Cisco.com Site Development Team
+ *
+ * This css library has been developed to the specifications 
+ * located at:  http://wwwin.cisco.com/webdev/internet/ue/cueg/
+ * please follow the instructions located at that url to
+ * properly use this libarary.  By using this CSS package, you 
+ * are accepting the support model described above.
+ *
+ ************************************************
+ * These divs/classes set the main content regions.  
+ *
+ * This is the overal sitecopy container, used for
+ * establishing context, and overriding body column
+ * margins in the docType template. 
+ * Set the main content regions.  
+ * 
+ * Overall sitecopy container, used for
+ * establishing context, and overriding body column
+ * margins in the page template. 
+ *************************************************/
+/************************************************
+ * Infrastructure Overrides 
+ * To deal with things like the high level, and 
+ * low level listings.
+ ************************************************/
+.contentMargins {
+	margin-left: 0px;
+	margin-right: 0px;	
+}
+
+#framework-content-main {
+	margin: 0px 0px 0px 0px;
+}
+ 
+.sitecopy {
+   	font-family: Arial, Helvetica, sans-serif;
+   	margin-left: 0px;
+	margin-right: 0px;
+}   
+
+.sitecopy .table-columns {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sitecopy .table-columns td, 
+.sitecopy .table-columns tr {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 1px 0px 0px;
+}
+
+.sitecopy .table-column-left,
+.sitecopy .table-column-both {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+.sitecopy .table-column-right {
+	border-right: 1px solid #cccccc;
+}
+
+/*****************************
+ * Framework V2 overrides 
+ *****************************/
+#framework-content-main .sitecopy .table-column-left {
+	border-left: 0px;
+}
+
+#framework-content-main .sitecopy .table-column-both {
+	border-left: 0px;
+	border-right: 0px;
+}
+
+#framework-content-main .sitecopy .table-column-right {
+	border-right: 0px;
+}
+
+/* Vision Statement Tables ****/
+/* table-vision-2 is only approved for use in the
+ * Partners and Resellers site area. */
+.sitecopy .table-vision, 
+.sitecopy .table-vision-2 {
+	border-collapse: collapse;
+}
+
+
+.sitecopy .table-vision td, 
+.sitecopy .table-vision tr,
+.sitecopy .table-vision-2 td,
+.sitecopy .table-vision-2 tr {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sitecopy .table-vision .table-column-left {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #eeeeee;
+	background-color: #eeeeee;
+}
+
+.sitecopy .table-vision-2 .table-column-left {
+	border-left: 0px;
+	border-right: 0px;
+	vertical-align: middle;
+}
+
+/* Framework V2 override */
+#framework-content-main .sitecopy .table-vision .table-column-left {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #eeeeee;
+	padding-left: 1px;
+}
+
+* html #framework-content-main .sitecopy .table-vision .table-column-left {
+	border-left: 0px;
+}
+
+/* Framework Libra override */
+#libra #framework-content-main .sitecopy .table-vision .table-column-left {
+	border-left: 0px;
+}
+
+
+.sitecopy .table-vision .table-column-right,
+.sitecopy .table-vision-2 .table-column-right {
+	border-right: 0px;
+}
+
+.sitecopy .table-vision img {
+	margin: 0px 0px 0px 0px;
+}
+ 
+/*****************************************************
+ *  Content Regions
+ *  
+ *  Apply grey border lines and 
+ *  some padding and margins (to provide the gap 
+ *  on horizontal rules.)
+ *****************************************************/
+/* The grey content region at the top of the page
+ * Usually grey, but the 'alt' style is a white 
+ * background */
+.sitecopy .table-vision .content-region-vision {
+   	margin: 0px 0px 0px 0px;
+   	background-color: #eeeeee;
+/* height 100% ensure consistent behavior 
+ * between IE and Mozilla. 100% makes Mozilla
+ * stretch the content area, like IEs out of spec
+ * behavior */
+   	height: 100%;
+}
+
+.sitecopy .table-vision-2 .content-region-vision {
+	margin: 0px 0px 0px 0px;
+}
+
+/* The top content regions have an extra 10px padding.
+ * This is applied in the content region (in favor 
+ *  of consistent "item" spacing */
+.sitecopy .content-region-left-top,
+.sitecopy .content-region-right-top,
+.sitecopy .content-region-both-top {
+	margin: 0px 2px 0px 2px;
+/* in version 1.4, top padding became zero.  < 1.4, was 10px. */
+	padding: 0px 0px 10px 0px;
+}
+
+/* this one is used in one column tables, when it 
+   is used underneath another component. ie. 2col->1col layouts.
+   this one generates a 2px gap with above element, and draws a border
+   but retains the extra top padding that the other top regions get */
+.sitecopy .content-region-both-top-topborder {
+	margin: 2px 2px 0px 2px;
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #cccccc;
+}
+
+/* bottom content regions */
+.sitecopy .content-region-left-bottom,
+.sitecopy .content-region-right-bottom,
+.sitecopy .content-region-both-bottom {
+	margin: 0px 2px 0px 2px;
+	padding: 0px 0px 10px 0px;
+	border-top: 1px solid #cccccc;
+}
+
+/**** Teal Headers ****/
+/* instead of 10px bottom padding (like the other modules)
+ * this one gets 0px, and padding is put in the .item
+ * this allows for a grey field "green header" module,
+ * that sits tight against the top of the next module.  
+ * without doing this, puts whitespace in. */
+.sitecopy .content-region-right-header,
+.sitecopy .content-region-left-header,
+.sitecopy .content-region-both-header {
+	margin: 0px 1px 0px 2px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sitecopy .content-region-right-header-alt, 
+.sitecopy .content-region-left-header-alt,
+.sitecopy .content-region-both-header-alt {
+	margin: 0px 1px 2px 2px;
+	padding: 0px 0px 0px 0px;
+	background-color: #eeeeee; 
+}
+
+#libra .sitecopy .content-region-right-header-alt, 
+#libra .sitecopy .content-region-left-header-alt,
+#libra .sitecopy .content-region-both-header-alt {
+	background-color: #d6d8da; 
+}
+
+.sitecopy .content-region-left-header-top,
+.sitecopy .content-region-right-header-top,
+.sitecopy .content-region-both-header-top {
+	margin: 2px 1px 0px 2px;
+	padding: 0px 0px 0px 0px;	
+}
+
+.sitecopy .content-region-left-header-top-alt,
+.sitecopy .content-region-right-header-top-alt,
+.sitecopy .content-region-both-header-top-alt {
+	margin: 2px 1px 2px 2px;
+	padding: 0px 0px 0px 0px;
+	background-color: #eeeeee;
+}
+
+#libra .sitecopy .content-region-left-header-top-alt,
+#libra .sitecopy .content-region-right-header-top-alt,
+#libra .sitecopy .content-region-both-header-top-alt {
+	background-color: #d6d8da;
+}
+
+.sitecopy .content-region-listing-header {
+	margin: 2px 2px 0px 2px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sitecopy .content-region-right-header,
+.sitecopy .content-region-right-header-alt,
+.sitecopy .content-region-right-header-top,
+.sitecopy .content-region-right-header-top-alt {
+	margin-right: 2px;
+}
+
+* html .sitecopy .content-region-right-header,
+* html .sitecopy .content-region-right-header-alt,
+* html .sitecopy .content-region-right-header-top,
+* html .sitecopy .content-region-right-header-top-alt,
+* html .sitecopy .content-region-listing-header {
+	margin-right: 1px;
+}
+
+
+
+/**************************************************************
+ * Floating Header 'region', functions much 
+ * like a content-region
+ *************************************************************/
+.sitecopy .float-header-right,
+.sitecopy .float-header-right-alt-1,
+.sitecopy .float-header-right-alt-2 {
+	margin: 0px 0px 10px 10px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #669999;
+	float: right;
+	width: 185px;
+}
+
+#libra .sitecopy .float-header-right,
+#libra .sitecopy .float-header-right-alt-1,
+#libra .sitecopy .float-header-right-alt-2 {
+	border: 1px solid #ccc;
+}
+.sitecopy .float-header-right-alt-1 {
+	border: 1px solid #666;
+}
+
+#libra .sitecopy .float-header-right-alt-1 {
+	border: 1px solid #d6d8da;
+}
+
+.sitecopy .float-header-right-alt-2 {
+	border: 1px solid #ccc;
+}
+
+#libra .sitecopy .float-header-right-alt-2 {
+	border: 1px solid #d6d8da;
+}
+
+/**************************************************************
+ * Solid Headers 
+ *************************************************************/
+.sitecopy .content-region-left-header h6,
+.sitecopy .content-region-left-header-alt h6,
+.sitecopy .content-region-right-header h6,
+.sitecopy .content-region-right-header-alt h6,
+.sitecopy .content-region-right-header-top h6,
+.sitecopy .content-region-right-header-top-alt h6,
+.sitecopy .content-region-left-header-top h6,
+.sitecopy .content-region-left-header-top-alt h6,
+.sitecopy .content-region-both-header h6,
+.sitecopy .content-region-both-header-alt h6,
+.sitecopy .content-region-both-header-top h6,
+.sitecopy .content-region-both-header-top-alt h6,
+.sitecopy .content-region-listing-header h6,
+.sitecopy .float-header-right h6,
+.sitecopy .float-header-right-alt-1 h6,
+.sitecopy .float-header-right-alt-2 h6 {
+	margin: 0px 0px 0px 0px;
+	padding: 2px 9px 2px 9px;
+	background-color: #669999;
+	font-size: 11px;
+	color: #ffffff;
+	border: 1px solid #669999;
+}
+
+#libra .sitecopy .content-region-left-header h6,
+#libra .sitecopy .content-region-left-header-alt h6,
+#libra .sitecopy .content-region-right-header h6,
+#libra .sitecopy .content-region-right-header-alt h6,
+#libra .sitecopy .content-region-right-header-top h6,
+#libra .sitecopy .content-region-right-header-top-alt h6,
+#libra .sitecopy .content-region-left-header-top h6,
+#libra .sitecopy .content-region-left-header-top-alt h6,
+#libra .sitecopy .content-region-both-header h6,
+#libra .sitecopy .content-region-both-header-alt h6,
+#libra .sitecopy .content-region-both-header-top h6,
+#libra .sitecopy .content-region-both-header-top-alt h6,
+#libra .sitecopy .content-region-listing-header h6,
+#libra .sitecopy .float-header-right h6,
+#libra .sitecopy .float-header-right-alt-1 h6,
+#libra .sitecopy .float-header-right-alt-2 h6 {
+	background-color: #d5e0e6;
+	color: #666;
+	border: 1px solid #d5e0e6;
+}
+
+#framework-content-main .sitecopy .content-region-left-header h6,
+#framework-content-main .sitecopy .content-region-left-header-alt h6,
+#framework-content-main .sitecopy .content-region-right-header h6,
+#framework-content-main .sitecopy .content-region-right-header-alt h6,
+#framework-content-main .sitecopy .content-region-right-header-top h6,
+#framework-content-main .sitecopy .content-region-right-header-top-alt h6,
+#framework-content-main .sitecopy .content-region-left-header-top h6,
+#framework-content-main .sitecopy .content-region-left-header-top-alt h6,
+#framework-content-main .sitecopy .content-region-both-header h6,
+#framework-content-main .sitecopy .content-region-both-header-alt h6,
+#framework-content-main .sitecopy .content-region-both-header-top h6,
+#framework-content-main .sitecopy .content-region-both-header-top-alt h6,
+#framework-content-main .sitecopy .content-region-listing-header h6,
+#framework-content-main .sitecopy .float-header-right h6,
+#framework-content-main .sitecopy .float-header-right-alt-1 h6,
+#framework-content-main .sitecopy .float-header-right-alt-2 h6 {
+	font-size: 88%;
+}
+
+.sitecopy .content-region-left-header h6.alt-1,
+.sitecopy .content-region-left-header-alt h6.alt-1,
+.sitecopy .content-region-right-header h6.alt-1,
+.sitecopy .content-region-right-header-alt h6.alt-1,
+.sitecopy .content-region-right-header-top h6.alt-1,
+.sitecopy .content-region-right-header-top-alt h6.alt-1,
+.sitecopy .content-region-left-header-top h6.alt-1,
+.sitecopy .content-region-left-header-top-alt h6.alt-1,
+.sitecopy .content-region-both-header h6.alt-1,
+.sitecopy .content-region-both-header-alt h6.alt-1,
+.sitecopy .content-region-both-header-top h6.alt-1,
+.sitecopy .content-region-both-header-top-alt h6.alt-1,
+.sitecopy .content-region-listing-header h6.alt-1,
+.sitecopy .float-header-right-alt-1 h6 {
+	background-color: #666;
+	border: 1px solid #666;
+	color: #ffffff;
+}
+
+.sitecopy .content-region-left-header h6.alt-2,
+.sitecopy .content-region-left-header-alt h6.alt-2,
+.sitecopy .content-region-right-header h6.alt-2,
+.sitecopy .content-region-right-header-alt h6.alt-2,
+.sitecopy .content-region-right-header-top h6.alt-2,
+.sitecopy .content-region-right-header-top-alt h6.alt-2,
+.sitecopy .content-region-left-header-top h6.alt-2,
+.sitecopy .content-region-left-header-top-alt h6.alt-2,
+.sitecopy .content-region-both-header h6.alt-2,
+.sitecopy .content-region-both-header-alt h6.alt-2,
+.sitecopy .content-region-both-header-top h6.alt-2,
+.sitecopy .content-region-both-header-top-alt h6.alt-2,
+.sitecopy .content-region-listing-header h6.alt-2,
+.sitecopy .float-header-right-alt-2 h6 {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	color: #000;
+}
+
+#libra .sitecopy .content-region-left-header h6.alt-2,
+#libra .sitecopy .content-region-left-header-alt h6.alt-2,
+#libra .sitecopy .content-region-right-header h6.alt-2,
+#libra .sitecopy .content-region-right-header-alt h6.alt-2,
+#libra .sitecopy .content-region-right-header-top h6.alt-2,
+#libra .sitecopy .content-region-right-header-top-alt h6.alt-2,
+#libra .sitecopy .content-region-left-header-top h6.alt-2,
+#libra .sitecopy .content-region-left-header-top-alt h6.alt-2,
+#libra .sitecopy .content-region-both-header h6.alt-2,
+#libra .sitecopy .content-region-both-header-alt h6.alt-2,
+#libra .sitecopy .content-region-both-header-top h6.alt-2,
+#libra .sitecopy .content-region-both-header-top-alt h6.alt-2,
+#libra .sitecopy .content-region-listing-header h6.alt-2,
+#libra .sitecopy .float-header-right-alt-2 h6 {
+	background-color: #d6d8da;
+	border: 1px solid #d6d8da;
+	color: #666;
+}
+
+.sitecopy .content-region-left-announcement,
+.sitecopy .content-region-right-announcement,
+.sitecopy .content-region-both-announcement,
+.sitecopy .content-region-right-quote {
+	margin: 2px 2px 2px 2px;
+	padding: 10px 0px 0px 0px;
+	background-color: #dae7f0;
+/* ie and it's damned border bug */
+	border: 1px solid #dae7f0;
+}
+
+#libra .sitecopy .content-region-left-announcement,
+#libra .sitecopy .content-region-right-announcement,
+#libra .sitecopy .content-region-both-announcement,
+#libra .sitecopy .content-region-right-quote {
+	background-color: #eaeff2;
+	border: 1px solid #eaeff2;
+}
+.sitecopy .content-region-right-sub-brand {
+	margin: 2px 2px 0px 2px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sitecopy .content-region-sidebar {
+	margin: 7px 0px 7px 0px;
+	padding: 10px 0px 0px 0px; 
+	background-color: #eeeeee;
+}
+
+#libra .sitecopy .content-region-sidebar {
+	background-color: #eaeff2;
+}
+
+.sitecopy .content-region-nav-tabs {
+	margin: 10px 2px 0px 2px;
+}
+
+
+/***************************************************************
+ * All 'content-blocks' take the form of [Item | NoItem].
+ *
+ * Item = 	1) at the top level of a content region, generates 
+ *        	the correct graphical carrot.
+ *			2) nested once in an Item, becomes a 'logical' 
+ *			sub-item. No identation.  Carrot is removed.  
+ *			Headers take on Subheading formatting.
+ *			3) nested more than once: become a 'logical' sub-item 
+ *			to it's parent Item (which by definition is already 
+ *			'logical' sub-item - #2 above - making this a 
+ *			sub-item to a sub-item.)  Gains indentation relative 
+ *			to parent Item, Headers take on Subheading formatting.
+ *
+ * NoItem = 1) at the top level of a content region, generates an 
+ *			entry equivalent to "Item" but without the graphical 
+ *			carrot. Margins are set to justify at the same left 
+ *			margin as the carrot in "Item" entries.
+ *			2) Not intended to be nested.  Use nested Items 
+ *			instead.
+ ***************************************************************/
+.sitecopy .item {
+/* 7px because 2px(gutter) + 1px border */
+  	padding: 10px 10px 10px 10px;
+}
+
+.sitecopy .content-region-vision .item {
+	padding-top: 10px;
+}
+
+.sitecopy .content-region-left-header .item, 
+.sitecopy .content-region-left-header-alt .item, 
+.sitecopy .content-region-right-header .item,
+.sitecopy .content-region-right-header-alt .item, 
+.sitecopy .content-region-right-header-top .item,
+.sitecopy .content-region-right-header-top-alt .item,
+.sitecopy .content-region-left-header-top .item,
+.sitecopy .content-region-left-header-top-alt .item,
+.sitecopy .content-region-both-header .item,
+.sitecopy .content-region-both-header-alt .item,
+.sitecopy .content-region-both-header-top .item,
+.sitecopy .content-region-both-header-top-alt .item {
+/* 12px right padding because 2px(gutter) + 1px border;
+ * 20px bottom padding (instead of 10) to
+ * handle the header region's lack of bottom padding */
+	padding: 10px 7px 20px 10px;
+	background-image: none;
+}
+
+.sitecopy .content-region-left-header-alt .item,
+.sitecopy .content-region-right-header-alt .item,
+.sitecopy .content-region-left-header-top-alt .item,
+.sitecopy .content-region-right-header-top-alt .item,
+.sitecopy .content-region-both-header-alt .item,
+.sitecopy .content-region-both-header-top-alt .item {
+	background-color: #eeeeee;
+}
+
+#libra .sitecopy .content-region-left-header-alt .item,
+#libra .sitecopy .content-region-right-header-alt .item,
+#libra .sitecopy .content-region-left-header-top-alt .item,
+#libra .sitecopy .content-region-right-header-top-alt .item,
+#libra .sitecopy .content-region-both-header-alt .item,
+#libra .sitecopy .content-region-both-header-top-alt .item {
+	background-color: #d6d8da;
+}
+
+.sitecopy .content-region-left-announcement .item,
+.sitecopy .content-region-right-announcement .item,
+.sitecopy .content-region-both-announcement .item {
+/* 7px right padding because 2px(gutter) + 1px border;
+ * 20px bottom padding (instead of 10) to
+ * handle the header region's lack of bottom padding */
+	padding: 8px 7px 20px 10px;
+	background-image: none;
+}
+
+.sitecopy .content-region-sidebar .item {
+	padding: 10px 9px 20px 9px;
+	background-image: none;
+}
+
+/* An item without carrot, reset margins for no carrot. */
+.sitecopy .item-no-caret {
+  	padding: 10px 10px 10px 10px;
+	background-image: none;
+}
+
+.sitecopy .item .item, 
+.sitecopy .item-no-caret .item {
+	padding: 0px 0px 0px 0px;
+  	margin: 12px 0px 0px 0px;
+  	background-image: none;
+  	/* Yucky hack! To fix dissappearing borders in IE. */
+  	border: 1px solid white; 
+}
+
+/********************************************************
+ * An Item nested further than twice.  This should cover
+ * basically unlimited item nesting.  Items nested more
+ * than once, are treated as sub-items, to sub-items; 
+ * gain additional margin to visual delineate.
+ ********************************************************/
+.sitecopy .item .item .item {
+	margin-left: 16px;
+}
+
+/********************************************************
+ * Floating Headers (function very 
+ * similarly to content-regions
+ *******************************************************/
+.sitecopy .float-header-right .item,
+.sitecopy .float-header-right-alt-1 .item,
+.sitecopy .float-header-right-alt-2 .item {
+	margin: 0px 0px 0px 0px;
+/* this is a nested item, and picks up the 1px white border
+ * to help IE through it's issues.  This padding reflects that. */
+	padding: 9px 9px 19px 9px;
+	background-image: none;
+}
+
+/********************************************************
+ * Top Level Primary Header (<H1>)
+ *********************************************************/
+.sitecopy .item h1,
+.sitecopy .item-no-caret h1 {
+   	margin: 0px 0px 6px 0px;
+   	padding: 0px 0px 0px 0px;
+   	font-size: 14px; 
+   	color: #333333;
+   	font-weight: bold;
+   	display: block;
+}
+
+#framework-content-main .sitecopy .item h1,
+#framework-content-main .sitecopy .item-no-caret h1 {
+	font-size: 112%;
+}
+
+/* in teal header regions */
+.sitecopy .content-region-left-header .item h1, 
+.sitecopy .content-region-right-header .item h1,
+.sitecopy .content-region-both-header .item h1,
+.sitecopy .content-region-left-header-top .item h1, 
+.sitecopy .content-region-right-header-top .item h1,
+.sitecopy .content-region-both-header-top .item h1,
+.sitecopy .content-region-left-header-alt .item h1, 
+.sitecopy .content-region-right-header-alt .item h1,
+.sitecopy .content-region-both-header-alt .item h1,
+.sitecopy .content-region-left-header-top-alt .item h1, 
+.sitecopy .content-region-right-header-top-alt .item h1,
+.sitecopy .content-region-both-header-top-alt .item h1,
+.sitecopy .content-region-left-announcement .item h1,
+.sitecopy .content-region-right-announcement .item h1,
+.sitecopy .content-region-both-announcement .item h1 {
+	font-size: 11px;
+}
+
+#framework-content-main .sitecopy .content-region-left-header .item h1, 
+#framework-content-main .sitecopy .content-region-right-header .item h1,
+#framework-content-main .sitecopy .content-region-both-header .item h1,
+#framework-content-main .sitecopy .content-region-left-header-top .item h1, 
+#framework-content-main .sitecopy .content-region-right-header-top .item h1,
+#framework-content-main .sitecopy .content-region-both-header-top .item h1,
+#framework-content-main .sitecopy .content-region-left-header-alt .item h1, 
+#framework-content-main .sitecopy .content-region-right-header-alt .item h1,
+#framework-content-main .sitecopy .content-region-both-header-alt .item h1,
+#framework-content-main .sitecopy .content-region-left-header-top-alt .item h1, 
+#framework-content-main .sitecopy .content-region-right-header-top-alt .item h1,
+#framework-content-main .sitecopy .content-region-both-header-top-alt .item h1,
+#framework-content-main .sitecopy .content-region-left-announcement .item h1,
+#framework-content-main .sitecopy .content-region-right-announcement .item h1,
+#framework-content-main .sitecopy .content-region-both-announcement .item h1 {
+	font-size: 88%;
+}
+
+/**********************************************************
+ * Top Level Secondary Header (<H2>)
+ * Nested Item <H1>
+ *********************************************************/
+.sitecopy .item h2, 
+.sitecopy .item-no-caret h2, 
+.sitecopy .item .item h1, 
+.sitecopy .item-no-caret .item h1 {
+	display: block;
+  	margin: 0px 0px 0px 0px;
+  	padding: 0px 0px 0px 0px;
+	font-size: 11px;
+	color: #990000;
+}
+
+#libra .sitecopy .item h2, 
+#libra .sitecopy .item-no-caret h2, 
+#libra .sitecopy .item .item h1, 
+#libra .sitecopy .item-no-caret .item h1 {
+	color: #8d5e01;
+}
+
+#framework-content-main .sitecopy .item h2, 
+#framework-content-main .sitecopy .item-no-caret h2, 
+#framework-content-main .sitecopy .item .item h1, 
+#framework-content-main .sitecopy .item-no-caret .item h1 {
+	font-size: 88%;
+}
+
+/****************************************************************
+ * Top Level Tertiary Headers (<H3>)
+ * Nested Item Subhead (<H2>)
+ ****************************************************************/
+.sitecopy .item .item h2, 
+.sitecopy .item-no-caret .item h2, 
+.sitecopy .item h3,
+.sitecopy .item-no-caret h3 {
+	display: block;
+	margin: 0px 0px 0px 0px;
+  	padding: 0px 0px 0px 0px;
+	font-size: 11px;
+	color: #666666;
+}
+
+#framework-content-main .sitecopy .item .item h2, 
+#framework-content-main .sitecopy .item-no-caret .item h2, 
+#framework-content-main .sitecopy .item h3,
+#framework-content-main .sitecopy .item-no-caret h3 {
+	font-size: 88%;
+}
+
+#framework-content-main .sitecopy .item h1 a,
+#framework-content-main .sitecopy .item h2 a,
+#framework-content-main .sitecopy .item h3 a,
+#framework-content-main .sitecopy .item h5 a,
+#framework-content-main .sitecopy .item h6 a 
+#framework-content-main .sitecopy .item a h1,
+#framework-content-main .sitecopy .item a h2,
+#framework-content-main .sitecopy .item a h3,
+#framework-content-main .sitecopy .item a h5,
+#framework-content-main .sitecopy .item a h6 {
+	font-size: 100%;
+}
+
+/*****************************************************************
+ * Eyebrow Headers <H4>
+ ****************************************************************/
+.sitecopy h5 {
+ 	margin: 0px 10px 0px 10px;
+	font-size: 10px;
+	line-height: 8px;
+	font-weight: normal;
+}
+
+#framework-content-main .sitecopy h5 {
+	font-size: 83%;
+	line-height: 100%;
+}
+
+.sitecopy .content-region-left-top h5,
+.sitecopy .content-region-right-top h5,
+.sitecopy .content-region-both-top h5,
+.sitecopy .content-region-left-bottom h5,
+.sitecopy .content-region-right-bottom h5,
+.sitecopy .content-region-both-bottom h5 {
+	margin: 12px 13px 0px 10px;	
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#framework-content-main .sitecopy .content-region-left-top h5,
+#framework-content-main .sitecopy .content-region-right-top h5,
+#framework-content-main .sitecopy .content-region-both-top h5,
+#framework-content-main .sitecopy .content-region-left-bottom h5,
+#framework-content-main .sitecopy .content-region-right-bottom h5,
+#framework-content-main .sitecopy .content-region-both-bottom h5 {
+	font-size: 88%;
+	font-weight: normal;
+}
+
+.sitecopy .content-region-left-header-top h5,
+.sitecopy .content-region-right-header-top h5,
+.sitecopy .content-region-both-header-top h5,
+.sitecopy .content-region-left-header h5,
+.sitecopy .content-region-right-header h5,
+.sitecopy .content-region-both-header h5,
+.sitecopy .content-region-left-header-top-alt h5,
+.sitecopy .content-region-right-header-top-alt h5,
+.sitecopy .content-region-both-header-top-alt h5,
+.sitecopy .content-region-left-header-alt h5,
+.sitecopy .content-region-right-header-alt h5,
+.sitecopy .content-region-both-header-alt h5 {
+	margin: 10px 10px 0px 9px;	
+}
+
+.sitecopy .content-region-sidebar h5 {
+	margin-left: 9px;
+}
+
+
+/*****************************************************************
+ * Regular old content.
+ *****************************************************************/
+.sitecopy p {
+	font-size: 12px;
+   	color: #474747;
+   	margin: 0px 0px 0px 0px;
+   	display: block;
+}
+
+#framework-content-main .sitecopy p {
+	font-size: 88%;
+}
+
+.sitecopy p.expanded-spacing {
+	margin: 0px 0px 10px 0px;	
+}
+
+.sitecopy p.compact {
+	margin: 0px 0px 0px 0px;	
+}
+
+/* Bold when in the grey area. */
+.sitecopy .content-region-vision .item p,
+.sitecopy .content-region-vision-alt .item p {
+  	color: #666666;
+  	font-weight: bold;
+}
+
+.sitecopy .table-vision-2 .content-region-vision .item p {
+	font-weight: normal;
+}
+
+/* Used to fix funky html whitespace issues. */
+.sitecopy .description-link {
+	display: block;
+	padding: 0px 0px 0px 0px;
+}
+
+/* Reduce line heigh of BR */
+.sitecopy br {
+	line-height: 12px;
+}
+
+#framework-content-main .sitecopy br {
+	line-height: 100%;
+}
+
+.sitecopy hr { 
+	margin:0px 2px 0px 2px;
+	background-color: #cccccc;
+	border: 0px;
+	color: #cccccc;
+	height: 1px;
+	padding: 0px 0px 0px 0px;   
+}
+
+/****************************************************
+ * Links
+ ****************************************************
+ * Any link, inside a header, in any Item (or NoItem)
+ * is bold, blue, underlined. This is a long list,
+ * needs to handle nested links, as well as both:
+ * <a><header></header></a> and <header><a></a></header>
+ *****************************************************/
+.sitecopy .item h1 a, 
+.sitecopy .item a h1,
+.sitecopy .item-no-caret h1 a, 
+.sitecopy .item-no-caret a h1,
+
+.sitecopy .item h2 a,
+.sitecopy .item a h2,
+.sitecopy .item-no-caret h2 a,
+.sitecopy .item-no-caret a h2,
+
+.sitecopy .item h3 a,
+.sitecopy .item a h3,
+.sitecopy .item-no-caret h3 a,
+.sitecopy .item-no-caret a h3,
+
+/* nested */
+.sitecopy .item .item h1 a,
+.sitecopy .item .item a h1,
+.sitecopy .item-no-caret .item h1 a,
+.sitecopy .item-no-caret .item a h1,
+
+.sitecopy .item .item h2 a,
+.sitecopy .item .item a h2,
+.sitecopy .item-no-caret .item h2 a,
+.sitecopy .item-no-caret .item a h2 {
+	font-weight: bold;
+	color: #003399;
+} 
+
+.sitecopy a {
+	font-size: 12px;
+   	font-weight: normal;
+   	text-decoration: underline;
+	color: #003399;
+}
+
+#framework-content-main .sitecopy a {
+	font-size: 88%;
+}
+
+
+#framework-content-main .sitecopy a p,
+#framework-content-main .sitecopy p a {
+	font-size: 100%;
+}
+
+.sitecopy .content-region-vision .item a {
+  	color: #666666;
+  	font-weight: normal;
+  	font-size: 10px;
+}
+
+.sitecopy .item .description-link {
+	font-size:11px;
+}
+
+.sitecopy .item .description-link a {
+	color: #003399;
+}
+
+#framework-content-main .sitecopy .description-link {
+	font-size: 88%;
+}
+
+#framework-content-main .sitecopy .description-link a {
+	font-size: 100%;
+}
+
+
+/*******************************************************
+ * Forms
+ ******************************************************/
+ .sitecopy form {
+ 	margin: 0px 0px 0px 0px;
+ }
+
+.sitecopy input.form-button {
+	font-family:Arial, sans-serif;
+	font-weight:bold;
+	font-size: 12px;
+	vertical-align:top;
+	background-color:#ffffcc;
+	color:#346669;
+	border-color:#999999 #333333 #333333 #999999;
+	cursor:hand;
+	padding: 0px 0px 0px 0px;
+	margin: 4px 0px 0px 0px;
+} 
+
+#framework-content-main .sitecopy input.form-button {
+	font-size: 92%;
+}
+
+.sitecopy select {
+	margin: 4px 0px 0px 0px;
+}
+ 
+/*******************************************************
+ * Spotlights
+ *******************************************************/
+.sitecopy .spotlight {
+	display: block;
+}
+
+.sitecopy .spotlight-img {
+	float:left;
+	margin: 2px 10px 0px 0px;
+}
+
+.sitecopy .spotlight-txt {
+	display: block;
+}
+
+.sitecopy .spotlight-magic {
+	clear: both;
+	display: block;
+}
+
+.sitecopy img {
+	border: 0px;
+}
+
+.sitecopy .spotlight-nowrap, 
+.sitecopy .spotlight-nowrap-60, 
+.sitecopy .spotlight-nowrap-120,
+.sitecopy .spotlight-wrap {
+	display: block;
+}
+
+.sitecopy .spotlight-wrap {
+	margin: 0px;
+}
+
+.sitecopy .spotlight-nowrap-60 {
+	margin: 0px 0px 0px 70px;
+}
+
+.sitecopy .spotlight-nowrap-120 {
+	margin: 0px 0px 0px 130px;
+}
+
+.sitecopy .spotlight-nowrap-60 img {
+	margin-left: -70px;
+	margin-top: 2px;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.sitecopy .spotlight-nowrap-120 img {
+	margin-left: -130px;
+	margin-top: 2px;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.sitecopy .spotlight-nowrap img {
+	margin-top: 2px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.sitecopy .spotlight-wrap img {
+	margin-top: 2px;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+
+/*******************************************************
+ * Illustrations
+ *******************************************************/
+.sitecopy .illustration-left,
+.sitecopy .illustration-right {
+	border: 1px solid #cccccc;
+	background-color: #cccccc;
+}
+
+.sitecopy .illustration-left {
+	margin: 0px 10px 10px 0px;
+	float: left;
+}
+
+.sitecopy .illustration-right {
+	margin: 0px 0px 10px 10px;
+	float: right;
+}
+
+.sitecopy .illustration img {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px
+}
+
+.sitecopy .illustration-left p,
+.sitecopy .illustration-right p {
+	margin: 0px 0px 0px 0px;
+	padding: 8px 0px 8px 14px;	
+	color: #333333;
+	background-color: #cccccc;
+	line-height: 11px;
+}
+
+#framework-content-main .sitecopy .illustration-left p,
+#framework-content-main .sitecopy .illustration-right p {
+	line-height: 100%;
+}
+
+
+.sitecopy .illustration-magic {
+	clear: both;
+	display: block;
+}	
+
+/**********************************************************
+ * Sub-Brands
+ **********************************************************/
+.sitecopy .sub-brand-float-left,
+.sitecopy .sub-brand-float-right {
+	border: 0px;	
+} 
+
+.sitecopy .sub-brand-float-left {
+	margin: 0px 10px 10px 0px;
+	float: left;
+}
+
+.sitecopy .sub-brand-float-right {
+	margin: 0px 0px 10px 10px;
+	float: right;
+}
+
+.sitecopy .sub-brand-magic {
+	clear: both;
+	display: block;	
+}
+
+/**********************************************************
+ * Lists
+ **********************************************************/
+.sitecopy ul li,
+.sitecopy ol li {
+	color: #474747;	
+	font-size: 12px; 
+}
+
+#framework-content-main .sitecopy ul li,
+#framework-content-main .sitecopy ol li, {
+	font-size: 88%; 
+}
+
+#framework-content-main .sitecopy ul ul li,
+#framework-content-main .sitecopy ul ol li, 
+#framework-content-main .sitecopy ol ul li, 
+#framework-content-main .sitecopy ol ol li {
+	font-size: 100%;
+}
+
+/* there is an a declaration elsewhere that is also 88%, breakt that cascade */
+#framework-content-main .sitecopy ul li a,
+#framework-content-main .sitecopy ol li a {
+	font-size: 100%;
+}
+
+.sitecopy ul.compact {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.sitecopy ol {
+	color: #666666;	
+	margin: 10px 0px 10px 18px;
+	padding: 0px 0px 0px 0px;
+}
+
+* html .sitecopy ol {
+	margin-left: 23px;	
+}
+
+.sitecopy ol.compact {
+	margin: 0px 0px 0px 18px;	
+}
+
+* html .sitecopy ol.compact {
+	margin-left: 23px;
+}
+
+.sitecopy ul.bulleted {
+	list-style-type: disc;
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 10px 15px;
+}
+
+.sitecopy ul.compact-bulleted {
+	list-style-type: disc;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 15px;
+}
+
+.sitecopy ul.bulleted ul.bulleted {
+	list-style-type: circle;
+}
+
+* html .sitecopy ul.bulleted,
+* html .sitecopy ul.compact-bulleted {
+	margin-left: 16px;
+}
+
+.sitecopy ul.no-bullets {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 6px 0px;
+	list-style-type: none;
+}
+
+.sitecopy ul.compact-no-bullets {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	list-style-type: none;
+}
+
+.sitecopy ul.no-bullets li,
+.sitecopy ul.compact-no-bullets li {
+	margin-bottom: 6px;
+	line-height: 12px;
+}
+
+#framework-content-main .sitecopy ul.no-bullets li,
+#framework-content-main .sitecopy ul.compact-no-bullets li {
+	line-height: 110%;
+} 
+
+.sitecopy ul.bulleted li,
+.sitecopy ul.compact-bulleted li,
+.sitecopy ol li {
+	margin-bottom: 8px;
+	line-height: normal;
+}
+
+#framework-content-main .sitecopy ul.bulleted li,
+#framework-content-main .sitecopy ul.compact-bulleted li,
+#framework-content-main .sitecopy ol li {
+	line-height: 128%;
+}
+
+
+.sitecopy li.last-li {
+	margin-bottom: 0px;
+} 
+
+/* Mime Type listing */
+.sitecopy ul.icon-list {
+	margin: 0px 0px 0px 19px;
+}
+
+.sitecopy ul.icon-list li {
+	margin-bottom: 6px;
+	line-height: 12px;
+	list-style-type: none;
+}
+
+#framework-content-main .sitecopy ul.icon-list li {
+	line-height: 100%;
+}
+
+.sitecopy ul.icon-list img {
+	margin-left: -19px;
+	margin-right: 6px;
+/*	vertical-align: text-bottom; */
+}
+
+.sitecopy .file-size {
+	color: #666666;
+}
+
+
+/******************************************************
+ * TABLES
+ *****************************************************/
+.sitecopy table {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px; 
+} 
+
+.sitecopy tr {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	/*vertical-align: top;*/
+}
+
+.sitecopy td {
+	margin: 0px 0px 0px 0px;
+	padding-left: 0px;
+	padding-right: 30px;
+}
+
+.sitecopy td.td-content-right {
+	padding-left: 15px;
+	padding-right: 0px;
+}
+
+.sitecopy td.td-content-left {
+	padding-left: 0px;
+	padding-right: 15px;
+}
+
+.sitecopy td.td-content-center {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/**********************************************************
+ * Formatted Tables
+ *********************************************************/
+.sitecopy table.table-formatted,
+.sitecopy table.table-formatted-vborders,
+.sitecopy table.table-formatted-alt,
+.sitecopy table.table-formatted-alt-vborders {
+	/*margin: 4px 0px 0px 0px;*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+/*	font-size: 11px; */
+}
+
+#framework-content-main .sitecopy table.table-formatted,
+#framework-content-main .sitecopy table.table-formatted-vborders,
+#framework-content-main .sitecopy table.table-formatted-alt,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders {
+/*	font-size: 88%; */
+}
+
+/* Table Headers */
+.sitecopy table.table-formatted th,
+.sitecopy table.table-formatted-vborders th {
+	padding: 3px 8px 3px 8px;
+	background-color: #769283;
+	border-left: 1px solid #99cccc;
+	border-right: 1px solid #99cccc;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#libra .sitecopy table.table-formatted th,
+#libra .sitecopy table.table-formatted-vborders th {
+	background-color: #eaeff2;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #eaeff2;
+	color: #666;
+}
+
+#framework-content-main .sitecopy table.table-formatted th,
+#framework-content-main .sitecopy table.table-formatted-vborders th {
+	font-size: 88%;
+}
+
+.sitecopy table.table-formatted-alt th,
+.sitecopy table.table-formatted-alt-vborders th {
+	padding: 3px 8px 3px 8px;
+	background-color: #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #ffffff;
+	font-size: 12px;
+	color: #333333;
+}
+
+#libra .sitecopy table.table-formatted-alt th,
+#libra .sitecopy table.table-formatted-alt-vborders th {
+	color:#666;
+}
+
+#framework-content-main .sitecopy table.table-formatted-alt th,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders th {
+	font-size: 88%;
+}
+
+/* Dark Table Headers */
+/* Teal */
+.sitecopy table.table-formatted tr.primary-header th,
+.sitecopy table.table-formatted-vborders tr.primary-header th {
+ 	background-color: #669999;
+ 	border-left: 1px solid #669999;
+ 	border-right: 1px solid #669999;
+ 	border-bottom: 1px solid #99cccc;
+ 	color: #ffffff;
+}
+
+#libra .sitecopy table.table-formatted tr.primary-header th,
+#libra .sitecopy table.table-formatted-vborders tr.primary-header th {
+	background-color: #d5e0e6;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #d5e0e6;
+	color: #666;
+}
+
+.sitecopy table.table-formatted-vborders tr.primary-header th.th-content-left,
+#libra .sitecopy table.table-formatted-vborders tr.primary-header th.th-content-left,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-left {
+	border-right: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-vborders tr.primary-header th.th-content-center,
+#libra .sitecopy table.table-formatted-vborders tr.primary-header th.th-content-center,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-center {
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-vborders tr.primary-header th.th-content-right,
+#libra .sitecopy table.table-formatted-vborders tr.primary-header th.th-content-right,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-right {
+	border-left: 1px solid #FFFFFF;
+}
+
+/* Grey */
+.sitecopy table.table-formatted-alt tr.primary-header th,
+.sitecopy table.table-formatted-alt-vborders tr.primary-header th,
+#libra .sitecopy table.table-formatted-alt tr.primary-header th,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th {
+	background-color: #666666;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #cccccc;
+	color: #FFFFFF;
+}
+
+#libra .sitecopy table.table-formatted-alt tr.primary-header th,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th {
+	background-color: #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-left,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-left {
+	border-right: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-center,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-center {
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-right,
+#libra .sitecopy table.table-formatted-alt-vborders tr.primary-header th.th-content-right {
+	border-left: 1px solid #FFFFFF;
+}
+
+/* Table Columns */
+/* Header Rows */
+.sitecopy table.table-formatted-vborders th.th-content-left,
+.sitecopy table.table-formatted-alt-vborders th.th-content-left,
+#libra .sitecopy table.table-formatted-vborders th.th-content-left,
+#libra .sitecopy table.table-formatted-alt-vborders th.th-content-left {
+	border-right: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-vborders th.th-content-right,
+.sitecopy table.table-formatted-alt-vborders th.th-content-right,
+#libra .sitecopy table.table-formatted-vborders th.th-content-right,
+#libra .sitecopy table.table-formatted-alt-vborders th.th-content-right {
+	border-left: 1px solid #FFFFFF;
+}
+
+.sitecopy table.table-formatted-vborders th.th-content-center,
+.sitecopy table.table-formatted-alt-vborders th.th-content-center,
+#libra .sitecopy table.table-formatted-vborders th.th-content-center,
+#libra .sitecopy table.table-formatted-alt-vborders th.th-content-center {
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+/* tds */
+/* Horizontal Borders */
+.sitecopy table.table-formatted td,
+.sitecopy table.table-formatted-vborders td,
+.sitecopy table.table-formatted-alt td,
+.sitecopy table.table-formatted-alt-vborders td {
+	padding: 6px 8px 6px 8px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #cccccc;
+	font-size: 11.3px;
+	color: #222222;
+}
+
+#framework-content-main .sitecopy table.table-formatted td,
+#framework-content-main .sitecopy table.table-formatted-vborders td,
+#framework-content-main .sitecopy table.table-formatted-alt td,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders td {
+	font-size: 88%;
+}
+
+.sitecopy table.table-formatted td.td-content-left,
+.sitecopy table.table-formatted-alt td.td-content-left {
+	border-left: 1px solid #cccccc;
+}
+
+.sitecopy table.table-formatted td.td-content-right,
+.sitecopy table.table-formatted-alt td.td-content-right {
+	border-right: 1px solid #cccccc;
+}
+
+.sitecopy table.table-formatted-vborders td,	
+.sitecopy table.table-formatted-alt-vborders td {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.sitecopy table.table-formatted-vborders tr.no-border td
+{
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+}
+
+
+.sitecopy table.table-formatted tr.no-border td,
+.sitecopy table.table-formatted-vborders tr.no-hborder td,
+.sitecopy table.table-formatted-alt tr.no-border td,
+.sitecopy table.table-formatted-alt-vborders tr.no-hborder td {
+	border-bottom: 0px;
+}
+
+/* Text Color */
+.sitecopy table.table-formatted p,
+.sitecopy table.table-formatted-vborders {
+	color: #666666;
+}
+
+#framework-content-main .sitecopy table.table-formatted p,
+#framework-content-main .sitecopy table.table-formatted-vborders p,
+#framework-content-main .sitecopy table.table-formatted-alt p,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders p, 
+#framework-content-main .sitecopy table.table-formatted a,
+#framework-content-main .sitecopy table.table-formatted-vborders a,
+#framework-content-main .sitecopy table.table-formatted-alt a,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders a, 
+#framework-content-main .sitecopy table.table-formatted h2,
+#framework-content-main .sitecopy table.table-formatted-vborders h2,
+#framework-content-main .sitecopy table.table-formatted-alt h2,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders h2,
+#framework-content-main .sitecopy table.table-formatted h3,
+#framework-content-main .sitecopy table.table-formatted-vborders h3,
+#framework-content-main .sitecopy table.table-formatted-alt h3,
+#framework-content-main .sitecopy table.table-formatted-alt-vborders h3 {
+	font-size: 100%;
+}
+
+
+/*************************************************
+ * Nav Tabs
+ ************************************************/
+.sitecopy .tab-container {
+	border-bottom: 3px solid #666666;
+}
+
+/* The table */
+.sitecopy .tab-container table {
+	border-collapse: collapse;
+}
+
+.sitecopy .tab-container table td {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	border-left: 2px solid white;
+	border-bottom: 1px solid #999999;
+	background-image: url(/swa/i/1px_white.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-color: #cccccc;
+}	
+
+.sitecopy .tab-container table td.tab-td-left,
+.sitecopy .tab-container table td.tab-td-active-left {
+	border-left: 0px;
+}
+
+.sitecopy .tab-container table td.tab-td-active,
+.sitecopy .tab-container table td.tab-td-active-left {
+	background-color: #666666;	
+	border-bottom: 1px solid #666666;
+}
+
+.sitecopy .tab-container table a {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 10px 3px 10px;
+	background-image: url(../images/1px_white.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+#framework-content-main .sitecopy .tab-container table a {
+	font-size: 88%; 
+}
+
+
+.sitecopy .tab-container table td.tab-td-active a,
+.sitecopy .tab-container table td.tab-td-active-left a {
+	color: #FFFFFF;
+	cursor: default;
+}
+
+/* sub nav */ 
+.sitecopy .tab-subnav-container { 
+	margin: 0px 0px 0px 0px; 
+	padding: 0px 0px 0px 0px; 
+	border-bottom: 1px solid #cccccc; 
+}
+
+.sitecopy .tab-subnav-container ul {
+/* 7px left margin to handle 3px on left side of first li */
+	margin: 5px 10px 7px 7px;
+}
+
+* html .sitecopy .tab-subnav-container ul {
+	margin-left: 1px;
+}
+
+.sitecopy .tab-subnav-container li {
+	margin: 0px 0px 0px 0px;
+/* 3px left to handle the space used to set up li wrapping */
+	padding: 0px 6px 0px 3px;
+	border-right: 1px solid #999999;
+	display: inline;
+	color: #000000;
+	font-weight:bold;
+	line-height: 16px;
+}
+
+#framework-content-main .sitecopy .tab-subnav-container li {
+	line-height: 140%;
+}
+
+* html .sitecopy .tab-subnav-container li {
+	margin-left: 6px;
+}
+
+.sitecopy .tab-subnav-container li a {
+	font-weight:normal;
+}	
+.sitecopy .tab-subnav-container li.last-li {
+	border-right: 0px;
+}
+
+
+/**********************************************************
+ * Quotes 
+ *********************************************************/
+.sitecopy .float-container-right {
+	 float:right;
+	 margin: 0px 0px 10px 10px;
+	 padding: 0px 0px 0px 0px;	
+ 	 width:185px;
+}
+
+.sitecopy .quote-right,
+.sitecopy .quote-left {
+	width:165px;
+	margin: 0px 0px 10px 10px;
+	padding:10px; 
+	background-color: #dae7f0;
+	float: right;
+}
+
+#libra .sitecopy .quote-right,
+#libra .sitecopy .quote-left {
+        background-color:#eaeff2;
+}
+
+.sitecopy .quote-left {
+	margin: 0px 10px 10px 0px;
+	float: left;
+}
+
+* html .sitecopy .quote-right,
+* html .sitecopy .quote-left {
+	width:185px;
+/* ie and it's damned border bug */
+	border: 1px solid #dae7f0;
+}
+
+* html #libra .sitecopy .quote-right,
+* html #libra .sitecopy .quote-left {
+	border: #eaeff2;
+}
+
+.sitecopy .quote-right .item,
+.sitecopy .quote-left .item {
+	border: 1px solid #dae7f0;
+}
+
+#libra .sitecopy .quote-right .item,
+#libra .sitecopy .quote-left .item {
+        border: #eaeff2;
+}
+.sitecopy .float-container-right .quote-left,
+.sitecopy .float-container-right .quote-right,
+.sitecopy .float-container-right .illustration-left,
+.sitecopy .float-container-right .illustration-right {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/* I can't wait for an update to IE */
+* html .sitecopy .float-container-right .quote-left,
+* html .sitecopy .float-container-right .quote-right,
+* html .sitecopy .float-container-right .illustration-left,
+* html .sitecopy .float-container-right .illustration-right {
+	margin-right:-2px;
+}	
+
+/**********************************************************
+ * FAQ / Q&A styles
+ *********************************************************/
+.sitecopy .faq-question {
+	margin: 0px 0px 3px 0px;
+	font-size: 11px; 
+	font-weight: bold;
+	line-height: 12px;
+}
+
+#framework-content-main .sitecopy .faq-question {
+	font-size: 88%;
+	line-height: 100%;
+}
+
+.sitecopy .faq-answer {
+	font-size: 11px;
+	line-height: 12px;
+} 
+
+#framework-content-main .sitecopy .faq-answer {
+	font-size: 88%;
+	line-height: 100%;
+}
+ 
+/**********************************************************
+ * News
+ * ----
+ * these news overrides style the feed that was developed 
+ * for the US homepage.  The lower case, hyphenated css 
+ * coding style guideline was not yet in place at that 
+ * time.
+ **********************************************************/
+.sitecopy .NewsModule {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.sitecopy .NewsModuleItem {
+	padding: 0px 0px 6px 0px;
+	margin: 0px 0px 0px 0px;
+	line-height: 13px;
+}
+
+.sitecopy .NewsModuleContentDate { 
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-size:9px;
+	color:#666666;
+	line-height: 13px;
+}
+
+#framework-content-main .sitecopy .ModuleLink {
+	font-size: 88%;
+}
+#framework-content-main .sitecopy .NewsModuleContentDate {
+	font-size: 88%;
+}
+
+/* Graphical button links this is intended for a div */
+.sitecopy .button-1,
+.sitecopy .button-1-left,
+.sitecopy .button-1-right {
+	margin: 2px 10px 2px 0px;
+	padding: 2px 8px 2px 8px;
+/*	font-size: 12px;  */
+	line-height: 15px;
+	font-weight: bold; 
+	border: 1px solid #336666;
+	background-color: #336666;
+	color: #ffffff; 
+	text-align: center;
+	display: inline;
+	float: left;
+}
+
+.sitecopy .button-1-right {
+	margin: 2px 0px 2px 10px;
+	float: right;
+}
+	
+.sitecopy .button-1 a,
+.sitecopy .button-1-left a,
+.sitecopy .button-1-right a {
+		text-decoration: none;
+		font-weight: bold;
+		color: #ffffff;
+/*		font-size: 12px; */
+}
+
+/***********************************************************
+ * useful utilitarian style that allows a dimensionless 
+ * <br clear="left">
+ **********************************************************/
+.sitecopy .clear-left-br {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	clear: left;
+}
+
+.sitecopy .clear-all {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	line-height: 1px;
+	clear: both;
+}
+
+.sitecopy .footnote-mark {
+	color: #990000;	
+}
