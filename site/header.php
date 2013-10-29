@@ -6,12 +6,9 @@
 			<img src="../site/images/sample_image.png" alt="logo" width="110" height="73" />
 		</div>
 		
-		
 	</div>
 
-
-
-
+	<div style="margin-top:100px;">
 
 	<table id="framework-wrapper" cellspacing="0" cellpadding="0" border="0" summary="" style="width:100%">
 		<tbody><tr>
@@ -33,5 +30,7 @@
 			</td>
 		</tr>
 	</tbody></table>
+	
+	</div>
 
 </div>

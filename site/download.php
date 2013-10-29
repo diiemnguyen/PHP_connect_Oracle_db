@@ -39,20 +39,33 @@ function tabSwitch(new_tab, new_content) {
 
 session_start();
 
+$username = $_POST["username"];
+$password = $_POST["password"];
+
 if (!isset($_POST['username']) || !isset($_POST['password'])) {
   header('Location: login.php');
 } else {
+  
+  /*************** CONNECT ORACLE DB ****************/
   // Check validity of the supplied username & password
-  $c = oci_connect('user??', 'password??','(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=??)(PORT=1521))
-(CONNECT_DATA=(SERVER=DEDICATED) (SERVICE_NAME = ??)))');
+/*  $c = oci_connect('root', 'Passw0rd','(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=3306))
+(CONNECT_DATA=(SERVER=DEDICATED) (SERVICE_NAME = companydb)))');
   // Use a "bootstrap" identifier for this administration page
   oci_set_client_identifier($c, 'admin');
 
-  $s = oci_parse($c, 'select * from TABLE_CURRENT_USERS where EMAIL = :un_bv and PASSWORD = :pw_bv');
-  oci_bind_by_name($s, ":un_bv", $_POST['username']);
-  oci_bind_by_name($s, ":pw_bv", $_POST['password']);
+  $s = oci_parse($c, 'select * from customer where cust_Email = :c_email and cust_Name = :c_name');
+  oci_bind_by_name($s, ":c_email", $username);
+  oci_bind_by_name($s, ":c_name", $password);
   oci_execute($s);
   $r = oci_fetch_array($s, OCI_ASSOC);
+*/    
+  
+   	/*********************** CONNECT MYySQL DB ************************/
+	$mysqli = new mysqli('localhost', 'root', 'Passw0rd', 'companydb');
+	$username = $mysqli->real_escape_string($username);
+	$query = "SELECT cust_Email FROM customer WHERE cust_Email = '$username';";
+	$r = $mysqli->query($query);
+
 
   if ($r) {
     // The password matches: the user can use the application
@@ -218,6 +231,8 @@ EOD;
     header('Location: login.php');
   }
 }
+
+
 
 
 ?>
